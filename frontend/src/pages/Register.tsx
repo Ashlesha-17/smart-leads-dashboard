@@ -24,43 +24,39 @@ export default function Register() {
   };
 
   return (
-    <div style={{ maxWidth: "300px", margin: "auto" }}>
-      <h2>Register</h2>
+  <div className="auth-container">
+    <h2>Register</h2>
 
-      <input
-        placeholder="Name"
-        onChange={(e) =>
-          setForm({ ...form, name: e.target.value })
-        }
-      />
+    <input
+      placeholder="Name"
+      value={form.name}
+      onChange={(e) => setForm({ ...form, name: e.target.value })}
+    />
 
-      <input
-        placeholder="Email"
-        onChange={(e) =>
-          setForm({ ...form, email: e.target.value })
-        }
-      />
+    <input
+      placeholder="Email"
+      value={form.email}
+      onChange={(e) => setForm({ ...form, email: e.target.value })}
+    />
 
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) =>
-          setForm({ ...form, password: e.target.value })
-        }
-      />
+    <input
+      type="password"
+      placeholder="Password"
+      value={form.password}
+      onChange={(e) => setForm({ ...form, password: e.target.value })}
+    />
 
-      <select
-        onChange={(e) =>
-          setForm({ ...form, role: e.target.value })
-        }
-      >
-        <option value="sales">Sales</option>
-        <option value="admin">Admin</option>
-      </select>
+    <select
+      value={form.role}
+      onChange={(e) => setForm({ ...form, role: e.target.value })}
+    >
+      <option value="sales">Sales</option>
+      <option value="admin">Admin</option>
+    </select>
 
-      <button onClick={handleRegister}>
-        Register
-      </button>
-    </div>
-  );
+    <button onClick={handleRegister}>
+      Register
+    </button>
+  </div>
+);
 }
