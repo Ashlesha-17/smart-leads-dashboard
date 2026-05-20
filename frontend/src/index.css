@@ -229,3 +229,24 @@ tr:hover {
 .dark body {
   background: #0f172a;
 }
+
+
+.auth-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #f4f6fb;
+}
+
+.auth-container h2 {
+  margin-bottom: 10px;
+}
+
+.auth-container input,
+.auth-container select {
+  width: 300px;
+}
